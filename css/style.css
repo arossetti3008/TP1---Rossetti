@@ -19,44 +19,44 @@
 /*Header*/
 .cabecera {
   display: grid;
+  grid-template-columns: auto 1fr; /* Columna automática para el logo, el resto flexible */
+  grid-template-rows: auto auto; /* Las filas se adaptan al contenido */
   grid-template-areas:
     "logo titulos"
     "logo nav";
-  gap: 10px;
+  align-items: center; /* Centra verticalmente los elementos */
+  padding: 10px;
+  gap: 0 20px; /* Espacio solo entre columnas */
 }
 
 .cabecera .logo {
-  display: flex;
   grid-area: logo;
-  width: 100px;
 }
 
 .cabecera .logo img {
-  width: 250px;
-  height: 250px;
+  width: 200px;  /* Tamaño base reducido y más manejable */
+  height: 200px;
   border-radius: 100%;
-  margin-top: 10px;
-  margin-left: 5px;
-  padding: 15px;
-  filter: drop-shadow(0 0 5px rgba(223, 201, 255, 0.9)) ;
+  filter: drop-shadow(0 0 5px rgba(223, 201, 255, 0.9));
 }
 
 .cabecera .titulos {
   grid-area: titulos;
-  margin-right: 15px;
-  height: 125px;
+  height: auto; /* CRÍTICO: Eliminamos la altura fija */
   filter: drop-shadow(0px 0px 4px rgb(158, 158, 158));
+  align-self: end; /* Alinea los títulos en la parte inferior de su celda */
 }
 
 .cabecera .titulos h2 {
   font-size: 70px;
-  margin-top: 20px;
   text-align: center;
   font-family: 'Dancing Script', cursive;
+  margin: 0;
+  padding: 0;
 }
 
 .cabecera .titulos h3 {
-  margin: 10px;
+  margin: 10px 0 0 0; /* Ajuste de margen */
   font-size: 25px;
   text-align: center;
   border-bottom: 1px solid whitesmoke;
@@ -68,13 +68,15 @@
 
 .cabecera .nav {
   grid-area: nav;
+  align-self: start; /* Alinea la navegación en la parte superior de su celda */
 }
 
 .cabecera .nav ul {
-  margin-top: -50px;
+  margin-top: 0; /* CRÍTICO: Eliminamos el margen negativo */
   display: flex;
   list-style: none;
   justify-content: space-around;
+  padding: 0;
 }
 
 .cabecera .nav ul li {
@@ -84,12 +86,12 @@
 }
 
 .cabecera .nav ul li a {
-  margin-left: -15px;
+  margin-left: 0; /* Eliminamos el margen negativo */
   text-decoration: none;
   color: rgb(248, 246, 246);
 }
 
-.cabecera .nav ul li a:hover{
+.cabecera .nav ul li a:hover {
   text-decoration: none;
   color: rgb(248, 246, 246);
   filter: drop-shadow(0px 0px 7px rgb(235, 238, 44));
