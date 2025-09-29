@@ -261,3 +261,66 @@ p {
         width: 95%;
     }
 }
+
+/* ================================================= */
+/* ========= SOLUCIÓN RESPONSIVE DEL HEADER ========= */
+/* ================================================= */
+
+/*
+  Breakpoint 1: Tabletas y pantallas medianas (hasta 1024px)
+  -----------------------------------------------------------
+  ACCIÓN: Reducimos tamaños para que el diseño se mantenga.
+*/
+@media (max-width: 1024px) {
+  .cabecera .logo img {
+    width: 150px; /* Se achica el logo */
+    height: 150px;
+  }
+  .cabecera .titulos h2 {
+    font-size: 55px; /* Se achican los títulos */
+  }
+  .cabecera .titulos h3 {
+    font-size: 20px;
+  }
+}
+
+
+/*
+  Breakpoint 2: Móviles (hasta 768px)
+  -------------------------------------
+  ACCIÓN: El header completo se transforma en una sola columna.
+*/
+@media (max-width: 768px) {
+  /* La cabecera ahora es una columna */
+  .cabecera {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espacio entre los elementos apilados */
+  }
+
+  /* <<< LA CORRECCIÓN ESTÁ AQUÍ >>> */
+  .cabecera .titulos {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho */
+  }
+
+  /* La barra de navegación también se convierte en columna */
+  .cabecera .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+/*
+  Breakpoint 3: Móviles muy pequeños (hasta 360px)
+  --------------------------------------------------
+  ACCIÓN: Ajuste final de fuentes.
+*/
+@media (max-width: 360px) {
+  .cabecera .titulos h2 {
+    font-size: 45px;
+  }
+  .cabecera .titulos h3 {
+    font-size: 18px;
+  }
+}
