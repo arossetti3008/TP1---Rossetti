@@ -1,0 +1,118 @@
+/*Estilos Generales*/
+* {
+  padding: 0;
+  margin: 0;
+  color: whitesmoke;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.nav .fas{
+  font-size: 20px;
+}
+
+.cuerpo {
+  background-color: black;
+  background: linear-gradient(70deg, rgba(124, 4, 184, 1) 0%, rgba(0, 0, 0, 1) 18%, rgba(124, 4, 184, 1) 100%);
+  background-image: url(../esset/img/4177.jpg);
+}
+
+/*Header*/
+.cabecera {
+  display: grid;
+  grid-template-areas:
+    "logo titulos"
+    "logo nav";
+  gap: 10px;
+}
+
+.cabecera .logo {
+  display: flex;
+  grid-area: logo;
+  width: 100px;
+}
+
+.cabecera .logo img {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 15px;
+  filter: drop-shadow(0 0 5px rgba(223, 201, 255, 0.9)) ;
+}
+
+.cabecera .titulos {
+  grid-area: titulos;
+  margin-right: 15px;
+  height: 125px;
+  filter: drop-shadow(0px 0px 4px rgb(158, 158, 158));
+}
+
+.cabecera .titulos h2 {
+  font-size: 70px;
+  margin-top: 20px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+}
+
+.cabecera .titulos h3 {
+  margin: 10px;
+  font-size: 25px;
+  text-align: center;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.cabecera .titulos span {
+  filter: drop-shadow(0px 0px 2px rgb(82, 6, 82));
+}
+
+.cabecera .nav {
+  grid-area: nav;
+}
+
+.cabecera .nav ul {
+  margin-top: -50px;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.cabecera .nav ul li {
+  text-align: center;
+  list-style: none;
+  padding: 10px;
+}
+
+.cabecera .nav ul li a {
+  margin-left: -15px;
+  text-decoration: none;
+  color: rgb(248, 246, 246);
+}
+
+.cabecera .nav ul li a:hover{
+  text-decoration: none;
+  color: rgb(248, 246, 246);
+  filter: drop-shadow(0px 0px 7px rgb(235, 238, 44));
+}
+
+/* Estilos del footer con ícono */
+.footer-icono {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background-color: rgba(31, 30, 30, 0.8);
+}
+
+.footer-icono .fas.fa-magic {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px gold; /* Efecto de brillo */
+}
+
+.footer-icono p {
+  font-size: 14px;
+}
+
+
+/*QUERIES*/
