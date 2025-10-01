@@ -19,14 +19,14 @@
 /*Header*/
 .cabecera {
   display: grid;
-  grid-template-columns: auto 1fr; /* Columna automática para el logo, el resto flexible */
-  grid-template-rows: auto auto; /* Las filas se adaptan al contenido */
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto auto; 
   grid-template-areas:
     "logo titulos"
     "logo nav";
-  align-items: center; /* Centra verticalmente los elementos */
+  align-items: center; 
   padding: 10px;
-  gap: 0 20px; /* Espacio solo entre columnas */
+  gap: 0 20px; 
 }
 
 .cabecera .logo {
@@ -34,7 +34,7 @@
 }
 
 .cabecera .logo img {
-  width: 200px;  /* Tamaño base reducido y más manejable */
+  width: 200px;  
   height: 200px;
   border-radius: 100%;
   filter: drop-shadow(0 0 5px rgba(223, 201, 255, 0.9));
@@ -42,7 +42,7 @@
 
 .cabecera .titulos {
   grid-area: titulos;
-  height: auto; /* CRÍTICO: Eliminamos la altura fija */
+  height: auto; 
   filter: drop-shadow(0px 0px 4px rgb(158, 158, 158));
   align-self: end; /* Alinea los títulos en la parte inferior de su celda */
 }
@@ -72,11 +72,12 @@
 }
 
 .cabecera .nav ul {
-  margin-top: 0; /* CRÍTICO: Eliminamos el margen negativo */
+  margin-top: 0; 
   display: flex;
   list-style: none;
   justify-content: space-around;
   padding: 0;
+  background-color: rgba(31, 30, 30, 0.5);
 }
 
 .cabecera .nav ul li {
@@ -86,7 +87,7 @@
 }
 
 .cabecera .nav ul li a {
-  margin-left: 0; /* Eliminamos el margen negativo */
+  margin-left: 0; 
   text-decoration: none;
   color: rgb(248, 246, 246);
 }
